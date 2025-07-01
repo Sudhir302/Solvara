@@ -1,12 +1,60 @@
-# React + Vite
+## Solvara Client
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Axios](https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+It's a **Frontend** part of Solvara built on React.js framework.
 
-Currently, two official plugins are available:
+## ⚡️ Features
+- Responsive and User Friendly
+- Search for User
+- Protected Routes
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Getting Started
+### Prerequisites
+- node
+- vs code
+- git
 
-## Expanding the ESLint configuration
+### Installation
+1. Clone the solvara repo:
+    ```
+    git clone https://github.com/Sudhir302/Solvara.git
+    ```
+2. Navigate to the client directory:
+    ```
+    cd client
+    ```
+3. Install dependencies:
+    ```
+    npm install
+    ```
+4. Run the client
+    ```
+    npm run dev
+    ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📁 Project Structure
+
+    Solvara/
+    |
+    ├── client/
+        |
+        ├── pubilc/
+        |
+        ├── src/
+            |
+            ├── Components/
+            |
+            ├── Pages/
+            |
+            ├── Styles/
+            |
+            ├── Utils/
+            |
+            ├── App.jsx
+            |
+            ├── main.jsx
+
+*For more details read the readme of Solvara*

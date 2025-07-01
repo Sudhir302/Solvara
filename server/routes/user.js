@@ -100,7 +100,7 @@ router.post("/logout",(req,res)=>{
     res.clearCookie("token", {
         httpOnly: true,
         secure: true,
-        sameSite: 'none',
+        sameSite: "none",
         maxAge: 1000*60*60,
     });
 

@@ -30,7 +30,7 @@ main().then(()=>{
 // -----------------------using middlewares---------------------------------
 
 app.use(express.json());
-app.use(cors({origin: true, credentials: true}));
+app.use(cors({origin: process.env.FRONTENDURI, credentials: true}));
 app.use(cookieparser());
 
 // ----------------------handling routes-----------------------------------

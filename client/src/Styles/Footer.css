@@ -1,0 +1,67 @@
+.footer-container{
+    color: white;
+    padding: .5rem;
+    width: 100%;
+    font-size: .9rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid white;
+    height: 6.25rem;
+}
+
+.footer-links{
+    width: 15%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-links .fa-brands{
+    color: white;
+    font-size: .9rem;
+}
+
+.policy{
+    position: relative;
+    display: inline-block;
+}
+
+.policy:hover{
+    cursor: pointer;
+    color: rgba(232, 153, 6, 0.852);
+}
+
+.policy::after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    background-color: rgba(232, 153, 6, 0.852);
+    width: 0%;
+    height: 0.125rem;
+    transition: width 0.5s ease;
+}
+
+.policy:hover::after{
+    width: 100%;
+}
+
+
+/* ---------------------responsiveness--------------------------- */
+
+@media screen and (max-width: 480px) {
+
+    .footer-container{
+        height: 8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .footer-links{
+        margin-top: .1rem;
+        width: 100%;
+    }
+
+}

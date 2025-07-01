@@ -1,0 +1,19 @@
+.profile-container{
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-container h1{
+    margin-bottom: 1.5rem;
+}
+
+/* ----------------------------------mobileview-------------------- */
+
+@media screen and (max-width: 480px){
+    .profile-container h1{
+        width: 80vw;
+    }
+}

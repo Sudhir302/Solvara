@@ -1,0 +1,76 @@
+.profile-details-container{
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    gap: 5rem;
+}
+
+
+.profile-home-img{
+    height: fit-content;
+    display: flex;
+}
+
+.profile-home-img img{
+    width: 13rem;
+    height: 13rem;
+    border: .5rem solid #fff;
+    border-radius: 50%;
+}
+
+.profile-home-img #username{
+    align-self: flex-end;
+}
+
+.profile-details{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-self:flex-end;
+}
+
+#username{
+    font-size: 3rem;
+    font-weight: 100;
+    font-family: roboto, inter, poppins;
+}
+
+#followers, #following{
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+
+/* ----------------------------mobileview---------------------- */
+
+@media screen and (max-width:480px) {
+    .profile-details-container{
+        flex-direction: column;
+        gap: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    .profile-home-img{
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    .profile-home-img img{
+        width: 9rem;
+        height: 9rem;
+        margin-bottom: .3rem;
+    }
+
+    .profile-home-img #username{
+        width: 100vw;
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .profile-details{
+        width: 100vw;
+        align-self: center;
+        justify-content: space-around;
+    }
+    
+}

@@ -1,0 +1,13 @@
+.logo{
+    min-width: 50px;
+    min-height: 50px;
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+    box-shadow: 
+    6px 6px 12px #0a071e,
+    -6px -6px 12px #251d66;
+    border: 2px solid rgb(0, 179, 255);
+    align-self: center;
+    cursor: pointer;
+}

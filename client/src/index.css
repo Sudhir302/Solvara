@@ -1,0 +1,24 @@
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: radial-gradient(circle at top left, #1a1440, #0d0b1f);
+    font-family: 'Poppins', 'Roboto', sans-serif;
+    color: #00eaff;
+}
+
+/* --------------responsiveness------------------------ */
+
+@media screen and (max-width: 480px) {
+    body{
+        height: 100%;
+    }
+}

@@ -1,0 +1,13 @@
+.logout{
+    align-self: center;
+    margin: 0 !important;
+}
+
+/* -----------------mobileview------------------- */
+
+@media screen and (max-width: 480px) {
+    .logout{
+        background-color: rgb(151, 41, 13) !important;
+        border: none !important;
+    }
+}

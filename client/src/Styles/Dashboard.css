@@ -1,0 +1,12 @@
+.dashboard-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-dash{
+    background: radial-gradient(circle at top left, #1a1440, #0d0b1f);
+    top: 0;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+}

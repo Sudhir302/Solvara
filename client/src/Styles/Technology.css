@@ -1,0 +1,102 @@
+.techno-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    margin-top: 3rem;
+}
+
+.techno-container{
+    margin-top: 35px;
+    overflow: hidden;
+    width: 80%;
+    height: 130px;
+    /* background-color: rgb(31, 73, 116); */
+    align-content: center;
+}
+
+.techno-track{
+    display: flex;
+    gap: 60px;
+    animation: seamless-loop 15s linear infinite;
+}
+
+.techno-track:hover{
+    animation-play-state: paused;
+}
+
+.techno-track a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    padding: 20px;
+    min-width: 80px;
+    min-height: 80px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    
+}
+
+.techno-track a i{
+    font-family: Inter;
+    font-size: 40px;
+    color: white;
+}
+
+.techno-track a:hover {
+    transform: translateY(-10px) scale(1.1);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes seamless-loop {
+    from{
+        transform: translateX(0);
+    }
+
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .techno-track {
+        gap: 40px;
+        animation-duration: 25s;
+    }
+    
+    .techno-track a {
+        min-width: 60px;
+        min-height: 60px;
+        padding: 15px;
+    }
+    
+    .techno-track a i {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .techno-track {
+        gap: 30px;
+        animation-duration: 20s;
+    }
+    
+    .techno-track a {
+        min-width: 50px;
+        min-height: 50px;
+        padding: 12px;
+    }
+    
+    .techno-track a i {
+        font-size: 24px;
+    }
+}

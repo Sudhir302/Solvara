@@ -1,0 +1,75 @@
+.features-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.features{
+    width: 100%;
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature-card{
+    width: 15.6rem;
+    height: 17.5rem;
+    background-color: #13102a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+    padding: 1rem;
+    transition: 1s;
+    box-shadow: 0 0 0.75rem rgba(0, 255, 255, 0.4);
+    margin-bottom: 4rem;
+}
+
+.feature-card .fa-solid{
+    width: 100%;
+    text-align: center;
+    font-size: 5rem;
+    margin-top: 0.4rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid white;
+    height: 6rem;
+}
+
+.feature-card div strong{
+    color: rgb(0, 234, 255);
+    width: 100%;
+    font-size: large;
+    font-family: Inter, sans-serif;
+    text-align: left;
+
+}
+
+.feature-card div p{
+    margin-top: .5rem;
+}
+
+.feature-card div{
+    background-color: transparent;
+    flex: 1;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    box-shadow: inset -4px -4px 8px #00ffcc30,
+                inset 4px 4px 8px #a6ff0020;
+}
+
+.feature-card:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgb(0, 255, 255);
+}
+
+/* -------------------media query----------------------- */
+
+@media screen and (max-width: 480px) {
+    .features-container{
+        margin-top: 3rem;
+    }
+}

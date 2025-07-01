@@ -1,0 +1,70 @@
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.people-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 64.5vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+.people{
+    width: 20rem;
+    display: flex;
+    gap: 1rem;
+    margin-left: 1rem;
+}
+
+.people p{
+    align-self: center;
+}
+
+.search{
+    position: relative;
+    width: fit-content;
+}
+
+.search input{
+    width: 20rem;
+    padding: 14px 18px;
+    font-size: 15px;
+    border: none;
+    border-radius: 28px;
+    background: linear-gradient(145deg, #0d112a, #090c20);
+    color: #00eaff;
+    box-shadow:
+      inset 4px 4px 8px rgba(0, 0, 0, 0.7),
+      inset -4px -4px 8px rgba(0, 255, 255, 0.05);
+    outline: none;
+}
+
+.search button{
+    position: absolute;
+    right: 1rem;
+    top: .5rem;
+    font-size: .8rem;
+    padding: .5rem;
+}
+
+
+/* ---------------------------mobileview---------------------------- */
+
+@media screen and (max-width: 480px) {
+
+    .contact-container{
+        align-items: center;
+        justify-content: space-around;
+        height: 100vh;
+        gap: 0;
+    }
+
+    .people-container{
+        height: 85vh;
+    }
+}

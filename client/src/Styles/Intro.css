@@ -1,0 +1,30 @@
+.profile-intro{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 32px;
+    padding: 30px 20px;
+    width: 300px;
+    box-shadow:
+    0 0 30px #00eaff40,
+    0 0 10px rgba(0, 255, 255, 0.759),
+    inset 0 0 10px rgba(0, 255, 255, 0.05);
+    border: 2px solid rgb(0, 255, 255);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    text-align: center;
+    color: #00eaff;
+}
+
+.profile-intro button{
+    align-self: center;
+}
+
+.setup{
+    color: green;
+}
+
+.punchline{
+    color: red;
+}

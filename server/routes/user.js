@@ -59,7 +59,7 @@ router.post("/signin", async(req,res)=>{
 
             res.cookie("token", token,{
                 httpOnly: true,
-                secure: false,
+                secure: true,
                 sameSite: 'Lax',
                 maxAge: 1000*60*60,
             })
@@ -99,7 +99,7 @@ router.put("/update/password", async(req,res)=>{
 router.post("/logout",(req,res)=>{
     res.clearCookie("token", {
         httpOnly: true,
-        secure: false,
+        secure: true,
         sameSite: 'strict',
         maxAge: 1000*60*60,
     });

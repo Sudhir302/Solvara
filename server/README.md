@@ -25,7 +25,7 @@ It's a **Backend** part of Solvara built on node.js and express.js framework.
     ```
     git clone https://github.com/Sudhir302/Solvara.git
     ```
-2. Navigate to the client directory:
+2. Navigate to the server directory:
     ```
     cd server
     ```
@@ -33,7 +33,7 @@ It's a **Backend** part of Solvara built on node.js and express.js framework.
     ```
     npm install
     ```
-4. Run the client
+4. Run the server
     ```
     npm start
     ```

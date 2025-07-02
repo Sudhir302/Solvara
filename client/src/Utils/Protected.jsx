@@ -17,7 +17,7 @@ function Protected({children}){
         const authCheck = async()=>{
             try {
                 const res = await axios.get(`${import.meta.env.VITE_BACKEND_URI_DEVELOPMENT}/user`, {withCredentials: true});
-                if(!res){
+                if(!res.status ==200){
                     toast.error("error fetching data")
                 }
                 setIsAuthenticated(res.data.success);

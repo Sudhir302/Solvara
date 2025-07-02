@@ -30,8 +30,8 @@ function Intro(){
     return(
         <div className="profile-intro ">
             <h1>RANDOM JOKES</h1>
-            <p className="setup">Setup: {question}</p>
-            <p className="punchline">Punchline: {punchline}</p>
+            <p className="setup"><strong>Setup:</strong> <i>{question}</i></p>
+            <p className="punchline"><strong>Punchline:</strong> <i>{punchline}</i></p>
             <button className="neon-btn" onClick={jokeHandler} type="button" disabled={loading === "Generating..."} >{loading}</button>
         </div>
     )

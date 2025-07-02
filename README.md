@@ -14,7 +14,7 @@ The **Solvara** has 2 main folder:
 - client: The  react, frontend code
 - server: The nodejs, backend code
 
-Live on👉: [Solvara]()
+Live on👉: [Solvara](https://solvara.vercel.app/)
 
 ## ⚡️ Features
 - Responsive and User Friendly

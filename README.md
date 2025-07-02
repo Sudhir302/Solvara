@@ -24,6 +24,19 @@ Live on👉: [Solvara](https://solvara.vercel.app/)
 - Edit and update his/her profile
 
 ## Screenshots
+<div align= "center">
+  <img src="./screenshots/desk1.png" width="600" height="350" />
+  <img src="./screenshots/desk2.png" width="600" height="350" />
+  <img src="./screenshots/desk3.png" width="600" height="350" />
+  <img src="./screenshots/userHome.png" width="600" height="350" />
+  <img src="./screenshots/userProfile.png" width="600" height="350" />
+  <img src="./screenshots/editProfile.png" width="600" height="350" />
+  <img src="./screenshots/mobprof.jpg" width="300" height="600" />
+  <img src="./screenshots/mobprof1.jpg" width="300" height="600" />
+  <img src="./screenshots/search.jpg" width="300" height="600" />
+  <img src="./screenshots/editmob.jpg" width="300" height="600" />
+  <img src="./screenshots/mobhome.jpg" width="300" height="600" />
+</div>
 
 
 ## 👩‍💻 Technologies Used

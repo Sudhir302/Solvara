@@ -14,6 +14,7 @@ const userModel = require('./models/users');
 const userRoute = require("./routes/user");
 const profileRoute = require("./routes/profile");
 const postRoute = require("./routes/post")
+const likeRoute = require("./routes/like");
 
 // ----------------------initializing mongoose-----------------------------
 const main = async()=>{
@@ -30,7 +31,7 @@ main().then(()=>{
 // -----------------------using middlewares---------------------------------
 
 app.use(express.json());
-app.use(cors({origin: process.env.FRONTENDURI, credentials: true}));
+app.use(cors({origin: process.env.FRONTENDURI, credentials: true})); 
 app.use(cookieparser());
 
 // ----------------------handling routes-----------------------------------
@@ -38,6 +39,7 @@ app.use(cookieparser());
 app.use("/api", userRoute);
 app.use("/api", profileRoute);
 app.use("/api", postRoute);
+app.use("/api", likeRoute);
 
 
 app.listen(port, '0.0.0.0', ()=>{

@@ -9,7 +9,7 @@ const likeSchema = new mongoose.Schema({
         type: mongoose.Schema.ObjectId,
         ref: "Post",
     },
-})
+});
 
 const likes = mongoose.model("Like", likeSchema);
 

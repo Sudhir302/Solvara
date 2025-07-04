@@ -5,8 +5,23 @@ import { useParams } from "react-router-dom";
 function UserPost(){
 
     let [posts, setPosts] = useState([]);
+    let[likes, setLikes] = useState({});
 
     const {userId} = useParams();
+
+    const likeHandler = async(postId)=>{
+        try {
+            console.log(postId)
+            const res = await axios.post(`${import.meta.env.VITE_BACKEND_URI_DEVELOPMENT}/post/${postId}/like`, {userId}, {withCredentials:true});
+            const totalLike = res.data.totalLike;
+            setLikes((curr)=>({
+                ...curr,
+                [postId]: totalLike,
+        }))
+        } catch (error) {
+            console.log(error);
+        }
+    }
 
     useEffect(()=>{
         const userPostHandler = async()=>{
@@ -23,6 +38,24 @@ function UserPost(){
 
         userPostHandler();
     }, [userId]);
+
+    useEffect(() => {
+        const initialLike = async () => {
+            try {
+                const res = await axios.get(`${import.meta.env.VITE_BACKEND_URI_DEVELOPMENT}/post/like/all-post`, {
+                    withCredentials: true
+                });
+
+                if (res.data.success) {
+                    setLikes(res.data.likes); // { postId: count }
+                }
+            } catch (error) {
+                console.log(error);
+            }
+        };
+
+        initialLike();
+    }, [userId]);
     return(
         <div className="post-father-container">
             {
@@ -37,7 +70,7 @@ function UserPost(){
                             <img src={post.postImg} alt="User Post" />
                         </div>
                         <div className="cmnt-like">
-                            <p id="like"><i className="fa-solid fa-thumbs-up"></i><strong>Like</strong></p>
+                            <p id="like" onClick={()=>likeHandler(post._id)}><i className="fa-solid fa-thumbs-up"></i><strong>{likes[post._id] || 0}</strong></p>
                             <p id="comment"><i className="fa-solid fa-comment"></i><strong>Comment</strong></p>
                         </div>
                     </div>)

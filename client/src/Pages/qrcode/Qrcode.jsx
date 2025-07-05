@@ -5,7 +5,7 @@ import "../../Styles/Qrcode.css"
 function Qrcode(){
     return(
         <div className="qr-code">
-            <h1>Generate Text from Text or Image</h1>
+            <h1>Generate QR code from Text or Image</h1>
             <nav className="qr-nav">
                 <Link to= "/qr/image">From Image</Link>
                 <Link to ="/qr/text">From Text</Link>

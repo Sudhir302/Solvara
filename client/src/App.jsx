@@ -15,6 +15,11 @@ import Clock from "./Pages/NavbarLink/Clock";
 import Nofeature from "./Pages/users/Nofeature";
 
 
+import Qrcode from "./Pages/qrcode/Qrcode";
+import Qrtext from "./Pages/qrcode/Qrtext";
+import Qrimage from "./Pages/qrcode/Qrimage";
+
+
 import Protected from "./Utils/Protected";
 import Owner from "./Utils/Owner";
 
@@ -26,6 +31,7 @@ import Person from "./Pages/profile/Person";
 import "./Styles/ReusableForm.css";
 import "./Styles/ReuseAll.css";
 import "./App.css";
+
 
 
 function App(){
@@ -47,9 +53,12 @@ function App(){
                 <Route path="/under/development" element = {<Nofeature />} />
 
                 <Route path="/person/:userId" element= {<Person />}></Route>
-
-
                 <Route path="/profile/:userId/search/users" element =  {<Contact />} />
+
+                <Route path="/qr" element= {<Qrcode />}>
+                    <Route path="text" element = {<Qrtext />} />
+                    <Route path="image" element = {<Qrimage />} />
+                </Route>
             </Routes>
         </BrowserRouter>
     )

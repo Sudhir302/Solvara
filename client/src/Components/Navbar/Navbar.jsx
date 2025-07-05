@@ -49,7 +49,7 @@ function Navbar() {
                     <Navcard name={<i className="fa-brands fa-facebook-messenger"></i>} path="/under/development" />
                     <Navcard name={<i className="fa-solid fa-store"></i>} path="/marketplace" />
                     <div className="clock">
-                        <Navcard name={<i className="fa-solid fa-clock"></i>} path="/clock" />
+                        <Navcard name={<i className="fa-solid fa-qrcode"></i>} path="/qr" />
                     </div>
                     <i className="fa-solid fa-bars nav-card-container" onClick={slidebarHandler}></i>
                 </div>

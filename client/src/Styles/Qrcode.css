@@ -1,0 +1,226 @@
+/* Main QR Code Container */
+.qr-code {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+}
+
+.qr-code h1 {
+  color: #fff;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation Styles */
+.qr-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.qr-nav a {
+  padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+}
+
+.qr-nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.qr-nav a:active,
+.qr-nav a.active {
+  background: linear-gradient(45deg, #ff6b6b, #ffa500);
+  border-color: #ff6b6b;
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Outlet Container */
+.outlet {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+/* QR Form Container */
+.qr-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.qr-container > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Input Styles */
+.text-input,
+input[type="file"] {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e1e5e9;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background: #fff;
+  color: black;
+}
+
+.text-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.text-input::placeholder {
+  color: #9ca3af;
+}
+
+/* File Input Styling */
+input[type="file"] {
+  cursor: pointer;
+  background: #f8f9fa;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 10px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+input[type="file"]::-webkit-file-upload-button:hover {
+  background: #5a67d8;
+}
+
+/* Neon Button Styles */
+.neon-btn {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.neon-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.neon-btn:hover::before {
+  left: 100%;
+}
+
+.neon-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.neon-btn:active {
+  transform: translateY(0);
+}
+
+/* QR Code Styling */
+.qr-container svg {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border: 2px solid #f1f3f4;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .qr-code {
+    padding: 1rem;
+  }
+  
+  .qr-code h1 {
+    font-size: 2rem;
+  }
+  
+  .qr-nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .qr-nav a {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  
+  .outlet {
+    padding: 1.5rem;
+  }
+  
+  .qr-container > div {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .qr-code h1 {
+    font-size: 1.8rem;
+  }
+  
+  .outlet {
+    padding: 1rem;
+  }
+  
+  .text-input,
+  input[type="file"] {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+  
+  .neon-btn {
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+}

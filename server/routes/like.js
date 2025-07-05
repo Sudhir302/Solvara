@@ -2,6 +2,9 @@ const express = require("express");
 const likeModel = require("../models/likes");
 const router = express.Router();
 
+const {uploadQr} = require("../uploads/cloudStorage");
+const qrModel = require("../models/qr");
+
 
 // --------------------------------specific post like---------------------------
 
@@ -59,6 +62,21 @@ router.get("/post/like/all-post", async (req, res) => {
         res.status(500).json({ message: "Internal server error", success: false });
     }
 });
+
+// --------------------------------------QRRoute------------------------------------------
+
+router.post("/qr/image",uploadQr.single("qrImage"), async(req, res)=>{
+    try {
+        const image = req.file.path;
+        if(!image){
+            return res.status(400).json({message: "Something went wrong", success: false})
+        }
+        return res.status(200).json({message: "Qr generated",image, success: true});
+    } catch (error) {
+        console.log(error);
+        return res.status(500).json({message: "internal server error", success: false});
+    }
+})
 
 
 module.exports = router; 

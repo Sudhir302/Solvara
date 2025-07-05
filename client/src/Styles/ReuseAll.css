@@ -69,6 +69,22 @@ a{
     align-items: center;
 }
 
+.text-input{
+    width: fit-content;
+    padding: 14px 18px;
+    margin: 18px 0;
+    font-size: 15px;
+    border: none;
+    border-radius: 28px;
+    background: linear-gradient(145deg, #0d112a, #090c20);
+    color: #00eaff;
+    box-shadow:
+      inset 4px 4px 8px rgba(0, 0, 0, 0.7),
+      inset -4px -4px 8px rgba(0, 255, 255, 0.05);
+    outline: none;
+    transition: 0.3s ease;
+}
+
 /* --------------bottom border animation----------------- */
 
 .underline{

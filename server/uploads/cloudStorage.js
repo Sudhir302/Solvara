@@ -40,9 +40,20 @@ const storagePost = new CloudinaryStorage({
     }
 })
 
+// -----------------------------qrimage--------------------------------
+
+const qrStorage = new CloudinaryStorage({
+    cloudinary: cloudinary,
+    params: {
+        folder: (req, file) => "QR",
+        format : async(req, file) => file.mimetype.split("/")[1],
+    }
+})
+
 
 const uploadCoverImg = multer({storage:storageCoverImg});
 const uploadProfileImg = multer({storage:storageProfileImg});
 const uploadPost = multer({storage: storagePost});
+const uploadQr = multer({storage: qrStorage});
 
-module.exports = {cloudinary, uploadCoverImg, uploadProfileImg, uploadPost};
+module.exports = {cloudinary, uploadCoverImg, uploadProfileImg, uploadPost, uploadQr};

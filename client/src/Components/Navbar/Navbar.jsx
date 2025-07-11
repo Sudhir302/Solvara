@@ -65,6 +65,9 @@ function Navbar() {
                     <Link to={`/profile/${userId}/search/users`}>
                         <button className="neon-btn">Search User</button>
                     </Link>
+                    <Link to= "/qr" >
+                        <button className="neon-btn">Generate QR</button>
+                    </Link>
                     <div className="mobile-logout">
                         <Logout />
                     </div>
